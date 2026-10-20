@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conecta-Timidez: um espaço acolhedor para encontrar pessoas com interesses em comum e praticar pequenas conexões.">
+  <title>Conecta-Timidez | Conexões no seu tempo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Conecta-Timidez - início">
+      <span class="brand-icon">♡</span><span>Conecta<span class="brand-dash">-</span>Timidez</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#descobrir">Descobrir pessoas</a>
+      <a href="#desafios">Desafios</a>
+      <a href="#comunidade">Comunidade</a>
+    </nav>
+    <button class="button button-small" id="openProfile">Meu perfil</button>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Um espaço para ser você</span>
+        <h1>Conexões reais,<br><span>no seu tempo.</span></h1>
+        <p class="hero-text">Conheça pessoas com interesses parecidos, pratique pequenas interações e descubra que cada conexão pode começar do seu jeito.</p>
+        <div class="hero-actions">
+          <a class="button" href="#descobrir">Encontrar conexões <span aria-hidden="true">→</span></a>
+          <a class="button button-outline" href="#desafios">Explorar desafios</a>
+        </div>
+        <div class="hero-note"><span class="note-icon">✦</span> Sem pressão. Um pequeno passo de cada vez.</div>
+      </div>
+      <div class="hero-art" aria-label="Ilustração decorativa de conexões entre pessoas">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-card art-card-main">
+          <div class="art-spark">✦</div>
+          <div class="avatar avatar-large avatar-a">L</div>
+          <div class="avatar avatar-large avatar-b">M</div>
+          <div class="avatar avatar-large avatar-c">R</div>
+          <div class="art-heart">♡</div>
+          <h3>Interesses em comum</h3>
+          <p>Uma conversa pode começar com algo que vocês adoram.</p>
+          <div class="interest-pills"><span>🎮 Jogos</span><span>🎵 Música</span><span>📚 Leitura</span></div>
+        </div>
+        <div class="floating-chip chip-top">💬 No seu ritmo</div>
+        <div class="floating-chip chip-bottom"><span class="tiny-check">✓</span> Cada passo conta</div>
+        <span class="decor-dot dot-one"></span><span class="decor-dot dot-two"></span>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div><span class="strip-icon">♡</span><span>Respeite seu ritmo</span></div>
+      <div><span class="strip-icon">✧</span><span>Encontre afinidades</span></div>
+      <div><span class="strip-icon">☼</span><span>Pequenos passos, grandes avanços</span></div>
+    </section>
+
+    <section class="section-wrap section" id="como-funciona">
+      <div class="section-heading">
+        <span class="eyebrow">COMO FUNCIONA</span>
+        <h2>Você não precisa mudar quem é.</h2>
+        <p>A ideia é tornar o primeiro passo mais leve, com ferramentas para conhecer pessoas e praticar no seu próprio ritmo.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-icon blue-icon">♡</div><h3>Seu jeito, seu perfil</h3><p>Conte um pouco sobre você, seus hobbies e os assuntos que gosta de conversar.</p><a href="#perfil">Personalizar perfil <span>→</span></a></article>
+        <article class="feature-card"><div class="feature-icon lavender-icon">✧</div><h3>Interesses que aproximam</h3><p>Descubra perfis de demonstração com gostos parecidos com os seus.</p><a href="#descobrir">Ver sugestões <span>→</span></a></article>
+        <article class="feature-card"><div class="feature-icon mint-icon">↗</div><h3>Avance sem pressa</h3><p>Experimente desafios opcionais para praticar pequenas interações.</p><a href="#desafios">Ver desafios <span>→</span></a></article>
+      </div>
+    </section>
+
+    <section class="section section-tinted" id="perfil">
+      <div class="section-wrap profile-layout">
+        <div class="profile-intro">
+          <span class="eyebrow">SEU ESPAÇO</span>
+          <h2>Um perfil com a sua personalidade.</h2>
+          <p>Escolha seus interesses e escreva uma apresentação. Isso ajuda o site a sugerir pessoas com assuntos em comum.</p>
+          <ul class="check-list"><li><span>✓</span> Você escolhe o que compartilhar</li><li><span>✓</span> Interesses editáveis a qualquer momento</li><li><span>✓</span> Perfil de exemplo salvo neste navegador</li></ul>
+        </div>
+        <form class="profile-form" id="profileForm">
+          <div class="form-title"><div class="avatar avatar-profile" id="profileAvatar">A</div><div><h3>Monte seu perfil</h3><p>Personalize sua apresentação</p></div></div>
+          <label for="displayName">Como quer ser chamado?</label>
+          <input id="displayName" maxlength="28" value="Alex" required placeholder="Seu nome ou apelido">
+          <label for="bioInput">Uma frase sobre você</label>
+          <textarea id="bioInput" maxlength="150" rows="2" placeholder="Ex.: Gosto de música, jogos e conversas tranquilas.">Gosto de música, jogos e conversas tranquilas.</textarea>
+          <fieldset><legend>Quais são seus interesses?</legend><div class="interest-options" id="interestOptions">
+            <label class="interest-option"><input type="checkbox" value="🎮 Jogos" checked><span>🎮 Jogos</span></label>
+            <label class="interest-option"><input type="checkbox" value="🎵 Música" checked><span>🎵 Música</span></label>
+            <label class="interest-option"><input type="checkbox" value="📚 Leitura"><span>📚 Leitura</span></label>
+            <label class="interest-option"><input type="checkbox" value="🎨 Arte"><span>🎨 Arte</span></label>
+            <label class="interest-option"><input type="checkbox" value="🎬 Filmes"><span>🎬 Filmes</span></label>
+            <label class="interest-option"><input type="checkbox" value="⚽ Esportes"><span>⚽ Esportes</span></label>
+            <label class="interest-option"><input type="checkbox" value="🐾 Animais"><span>🐾 Animais</span></label>
+            <label class="interest-option"><input type="checkbox" value="🌿 Natureza"><span>🌿 Natureza</span></label>
+          </div></fieldset>
+          <button class="button full-width" type="submit">Salvar meu perfil</button>
+          <p class="form-feedback" id="profileFeedback" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-wrap" id="descobrir">
+      <div class="section-heading heading-row">
+        <div><span class="eyebrow">ENCONTRE AFINIDADES</span><h2>Talvez vocês gostem das mesmas coisas.</h2><p>Estas pessoas são perfis fictícios criados para a demonstração escolar.</p></div>
+        <label class="filter-label" for="matchFilter">Filtrar por interesse<select id="matchFilter"><option value="all">Todos os interesses</option><option>🎮 Jogos</option><option>🎵 Música</option><option>📚 Leitura</option><option>🎨 Arte</option><option>🎬 Filmes</option><option>⚽ Esportes</option><option>🐾 Animais</option><option>🌿 Natureza</option></select></label>
+      </div>
+      <div class="match-grid" id="matchGrid"></div>
+      <p class="empty-state hidden" id="emptyMatches">Ainda não há perfis com esse interesse. Tente outro filtro.</p>
+      <p class="demo-disclaimer">Os perfis e as interações são apenas demonstrações. Nenhuma mensagem é enviada para pessoas reais.</p>
+    </section>
+
+    <section class="section challenge-section" id="desafios">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <span class="eyebrow">NO SEU PRÓPRIO RITMO</span>
+          <h2>Pequenos desafios, grandes passos.</h2>
+          <p>Escolha atividades que pareçam confortáveis para você. Você pode pular qualquer desafio ou voltar a ele depois.</p>
+        </div>
+        <div class="progress-panel">
+          <div><span class="progress-label">Seu progresso de demonstração</span><h3><span id="completedCount">0</span> de 5 desafios concluídos</h3></div>
+          <div class="progress-track" aria-label="Progresso dos desafios"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+        <div class="challenge-list" id="challengeList"></div>
+        <p class="gentle-note">💙 Lembre-se: timidez não é uma falha. O objetivo não é virar outra pessoa, mas encontrar formas de se conectar que façam sentido para você.</p>
+      </div>
+    </section>
+
+    <section class="section section-wrap" id="comunidade">
+      <div class="section-heading">
+        <span class="eyebrow">FÓRUM COMUNITÁRIO</span>
+        <h2>Conversas começam com acolhimento.</h2>
+        <p>Compartilhe uma ideia, faça uma pergunta ou deixe uma mensagem gentil para a comunidade de demonstração.</p>
+      </div>
+      <div class="forum-layout">
+        <form class="post-form" id="postForm"><h3>Crie uma publicação</h3><label for="postTopic">Assunto</label><select id="postTopic"><option>Fazendo amizades</option><option>Interesses e hobbies</option><option>Pequenas conquistas</option><option>Pedindo conselhos</option></select><label for="postText">Sua mensagem</label><textarea id="postText" rows="4" maxlength="300" required placeholder="Escreva algo respeitoso e acolhedor..."></textarea><div class="form-bottom"><span id="charCount">0/300</span><button class="button" type="submit">Publicar mensagem</button></div><p class="form-feedback" id="postFeedback" role="status"></p></form>
+        <div class="forum-posts"><div class="forum-toolbar"><h3>Da comunidade</h3><span class="live-label"><span></span> Mural de exemplo</span></div><div id="forumList"></div></div>
+      </div>
+      <p class="safety-note"><strong>Combinado de segurança:</strong> seja respeitoso, não compartilhe dados pessoais e lembre-se de que este mural é local e demonstrativo. Em uma versão pública, seria necessário implementar moderação e ferramentas de denúncia.</p>
+    </section>
+
+    <section class="closing-cta">
+      <div class="closing-shape shape-left"></div><div class="closing-shape shape-right"></div>
+      <div class="closing-content"><span class="closing-heart">♡</span><h2>Uma conexão de cada vez.</h2><p>Você merece um espaço onde possa ser você mesmo, sem pressa e sem julgamentos.</p><a class="button button-white" href="#perfil">Começar pelo meu perfil <span>→</span></a></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#inicio"><span class="brand-icon">♡</span><span>Conecta<span class="brand-dash">-</span>Timidez</span></a><p>Projeto escolar demonstrativo · Conexões com respeito e acolhimento.</p><a href="#inicio">Voltar ao início ↑</a></footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="messageDialog" class="message-dialog"><button class="dialog-close" id="closeDialog" aria-label="Fechar">×</button><div class="dialog-icon">💬</div><h2 id="dialogTitle">Começar uma conversa</h2><p id="dialogDescription"></p><label for="messageDraft">Uma ideia para começar</label><textarea id="messageDraft" rows="3"></textarea><div class="dialog-actions"><button class="button button-outline" id="cancelMessage">Agora não</button><button class="button" id="saveMessage">Guardar ideia</button></div><p class="dialog-footnote">Demonstração: a mensagem não será enviada a ninguém.</p></dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
